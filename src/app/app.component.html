@@ -3,7 +3,7 @@
   <button (click)="addItem()">Add</button>
   <div formArrayName="products">
     <div *ngFor="let cred of form.get('products').controls; let i = index"
-         [formGroupName]="i" style="display: flex">
+         [formGroup]="cred" style="display: flex">
       <input placeholder="price" formControlName="price">
       <input placeholder="newPrice" formControlName="newPrice">
     </div>
